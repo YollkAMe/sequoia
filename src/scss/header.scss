@@ -10,13 +10,14 @@
 	padding: rem(40) 0;
 	position: sticky;
 	top: 0;
+	z-index: 200;
 	background: linear-gradient(180deg, #000000 45.56%, rgba(0, 0, 0, 0.8) 56.45%, rgba(0, 0, 0, 0.6) 67.34%, rgba(0, 0, 0, 0.4) 78.23%, rgba(0, 0, 0, 0.2) 89.11%, rgba(0, 0, 0, 0) 100%);
 	
 	@media (max-width: $pc) {
 		padding: rem(30) 0;
 	}
 	@media (max-width: $tablet) {
-		padding: rem(16) 0;
+		padding: rem(16) 0 rem(20);
 	}
 	&__wrapper {
 		max-width: rem(1302);
@@ -43,6 +44,14 @@
 			width: rem(58);
 			height: rem(58);
 		}
+		@media (max-width: $tablet) {
+			width: rem(50);
+			height: rem(50);
+		}
+		@media (max-width: $mobile) {
+			width: rem(46);
+			height: rem(46);
+		}
 	}
 }
 .navigation {
@@ -59,9 +68,25 @@
 		margin-right: rem(24);
 		padding-bottom: rem(4);
 		@media (max-width: $pc) {
+			padding-top: rem(8);
 			font-size: rem(15);
 			line-height: rem(18);
 			margin-right: rem(20);
+		}
+	}
+	&__link {
+		cursor: pointer;
+		&:hover {
+			color: $accentColor;
+			border-bottom: 1px solid $accentColor;
+		}
+		&:focus {
+			color: $accentColor;
+			border-bottom: 1px solid $accentColor;
+		}
+		&:active {
+			color: $accentColor;
+			border-bottom: 1px solid $accentColor;
 		}
 	}
 }
@@ -302,7 +327,7 @@ Burger
 		width: rem(30);
 		height: rem(20);
 		cursor: pointer;
-		z-index: 5;
+		z-index: 202;
 		span,
 		&::before,
 		&::after {
@@ -341,16 +366,42 @@ Burger
 		}
 	}
 }
-.menu__body {
-	display: none;
-	.menu-open & {
-		display: block;
-		position: absolute;
-		right: 0;
-		top: 0;
-		background-color: $darkColor;
-		padding: rem(60);
-		height: 100vh;
-		z-index: 4;
+.menu {
+	&__body {
+		display: none;
+		
+		.menu-open & {
+			display: block;
+			position: absolute;
+			right: 0;
+			top: 0;
+			background-color: $darkColor;
+			padding: rem(60);
+			// height: 100vh;
+			z-index: 201;
+		}
 	}
+	&__item {
+		margin-bottom: rem(16);
+	}
+	&__link {
+		padding-bottom: rem(4);
+		cursor: pointer;
+		&:hover {
+			color: $accentColor;
+			border-bottom: 1px solid $accentColor;
+		}
+		&:focus {
+			color: $accentColor;
+			border-bottom: 1px solid $accentColor;
+		}
+		&:active {
+			color: $accentColor;
+			border-bottom: 1px solid $accentColor;
+		}
+	}
+}
+
+.menu-open body::after {
+	opacity: 1;
 }

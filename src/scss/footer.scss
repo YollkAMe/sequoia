@@ -1,3 +1,26 @@
 //====================================================================================================
-
+.footer {
+   padding: rem(50) 0;
+   background-color: $bgColor;
+   &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+   }
+   &__copyright {
+      font-family: 'StoneSoupNFW';
+      font-size: rem(17);
+      line-height: rem(21);
+      letter-spacing: 0.05em;
+      padding-left: rem(36);
+      padding-top: rem(15);
+      padding-bottom: rem(15);
+      background-image: url("@img/leaf-12.png");
+		background-position: left center;
+		background-repeat: no-repeat;
+		background-size: contain;
+   }
+}
 //====================================================================================================
