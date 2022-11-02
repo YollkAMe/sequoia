@@ -1,0 +1,154 @@
+.subscribe {
+   background-color: $bgColor;
+   position: relative;
+   overflow: visible;
+   &::before {
+      content: "";
+      position: absolute;
+      top: rem(-173);
+      left: 0;
+      right: 0;
+      height: rem(208);
+      width: 100%;
+      background: linear-gradient(180deg, #000000 18.83%, rgba(0, 0, 0, 0) 100%);
+      transform: matrix(1, 0, 0, -1, 0, 0);
+   }
+
+   &__box {
+      padding: rem(76);
+      background: linear-gradient(180deg, #0E1A19 0%, #133B2A 100%);
+      position: relative;
+      @media (max-width: $mobileMiddle) {
+         padding: rem(40);
+      }
+      &::after {
+         content: "";
+         position: absolute;
+         top: rem(-10);
+         right: 50%;
+         transform: translateX(50%);
+         width: rem(222);
+         height: rem(415);
+         background-image: url("@img/im-tree-1x.png");
+         background-image: -webkit-image-set(url("@img/im-tree-1x.png") 1x, url("@img/im-tree-2x.png") 2x);
+         background-image: image-set("@img/im-tree-1x.png" 1x, "@img/im-tree-2x.png" 2x);
+         filter: drop-shadow(0px 29px 80px rgba(0, 0, 0, 0.44)) drop-shadow(0px 14.6812px 34.875px rgba(0, 0, 0, 0.28)) drop-shadow(0px 5.8px 13px rgba(0, 0, 0, 0.24)) drop-shadow(0px 1.26875px 4.625px rgba(0, 0, 0, 0.12));
+         @media (max-width: $tablet) {
+            right: rem(30);
+            top: 50%;
+            transform: translateY(-50%);
+         }
+         @media (max-width: $mobile) {
+            right: rem(-5);
+            top: 50%;
+         }
+         @media (max-width: $mobileMiddle) {
+            display: none;
+         }
+      }
+   }
+   &__box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media (max-width: $tablet) {
+			flex-direction: column;
+         align-items: start;
+		}
+      @media (max-width: $mobileMiddle) {
+         align-items: center;
+      }
+   }
+   &__info {
+      display: flex;
+      flex-direction: column;
+      max-width: rem(290);
+      position: relative;
+      @media (max-width: $tablet) {
+			margin-bottom: rem(30);
+		}
+      
+      &::before {
+         content: "";
+         position: absolute;
+         top: rem(-23);
+         left: rem(-32);
+         background-image: url("@img/sign-bg-green.svg");
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: contain;
+         width: rem(316);
+         height: rem(233);
+         z-index: 1;
+         @media (max-width: $mobileSmall) {
+            width: rem(305);
+            height: rem(220);
+         }
+      }
+   }
+   &__action {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      max-width: rem(320);
+      padding-right: rem(20);
+   }
+   &__text {
+		font-family: 'StoneSoupNFW';
+		font-weight: 400;
+		font-size: rem(48);
+		line-height: rem(46);
+		letter-spacing: 0.05em;
+		margin-bottom: rem(12);
+		position: relative;
+      max-width: rem(270);
+		@media (max-width: $pc) {
+			font-size: rem(40);
+			line-height: rem(38);
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			top: rem(-18);
+			left: rem(-36);
+			background-image: url("@img/leaf-8.png");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: rem(36);
+			height: rem(31);
+			// @media (max-width: $mobile) {
+			// 	display: none;
+			// }
+		}
+	}
+	&__text-accent {
+		font-family: 'StoneSoupNFW';
+		font-weight: 400;
+		font-size: rem(48);
+		line-height: rem(46);
+		letter-spacing: 0.05em;
+      color: $accentColor;
+      padding-left: rem(20);
+		margin-bottom: rem(12);
+		position: relative;
+		@media (max-width: $pc) {
+			font-size: rem(40);
+			line-height: rem(38);
+		}
+      
+	}
+   &__action-text {
+      font-size: rem(25);
+      line-height: rem(32);
+      text-align: right;
+      margin-bottom: rem(24);
+      @media (max-width: $pc) {
+			font-size: rem(22);
+			line-height: rem(30);
+		}
+   }
+   &__button {
+      width: rem(188);
+   }
+}
