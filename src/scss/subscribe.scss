@@ -1,7 +1,8 @@
 .subscribe {
    background-color: $bgColor;
    position: relative;
-   overflow: visible;
+   padding-bottom: rem(48);
+   // overflow: visible;
    &::before {
       content: "";
       position: absolute;
@@ -213,12 +214,13 @@
 			position: absolute;
 			bottom: rem(-108);
 			left: rem(-15);
-			background-image: url("@img/leaf-11.png");
+			background-image: url("@img/leaf-11-2.png");
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: contain;
-			width: rem(45);
-			height: rem(35);
+			width: rem(53);
+			height: rem(43);
+         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
          @media (max-width: $pc) {
             bottom: rem(-100);
          }

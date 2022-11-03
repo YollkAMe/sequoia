@@ -1,6 +1,6 @@
 //====================================================================================================
 .header {
-	background-color: #15151C;
+	background-color: $bgColor;
 	background-image: url("@img/header-bg.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
@@ -138,14 +138,15 @@
 	&__welcome-txt::before {
 		content: "";
 		position: absolute;
-		top: rem(-10);
-		left: rem(-30);
+		top: rem(-12);
+		left: rem(-38);
 		background-image: url("@img/leaf-1.png");
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: contain;
-		width: rem(28);
-		height: rem(28);
+		width: rem(32);
+		height: rem(31);
+		filter: drop-shadow(0px 13px 18px rgba(0, 0, 0, 0.12)) drop-shadow(0px 5.00741px 5.73333px rgba(0, 0, 0, 0.22)) drop-shadow(0px 1.05926px 1.46667px rgba(0, 0, 0, 0.22));
 	}
 	&__welcome-image {
 		position: relative;
@@ -163,6 +164,7 @@
 			background-size: contain;
 			width: rem(41);
 			height: rem(36);
+			filter: drop-shadow(0px 13px 18px rgba(0, 0, 0, 0.12)) drop-shadow(0px 5.00741px 5.73333px rgba(0, 0, 0, 0.22)) drop-shadow(0px 1.05926px 1.46667px rgba(0, 0, 0, 0.22));
 			@media (max-width: $mobileXSmall) {
 				display: none;
 			}
@@ -178,6 +180,7 @@
 			background-size: contain;
 			width: rem(29);
 			height: rem(24);
+			filter: drop-shadow(0px 13px 18px rgba(0, 0, 0, 0.12)) drop-shadow(0px 5.00741px 5.73333px rgba(0, 0, 0, 0.22)) drop-shadow(0px 1.05926px 1.46667px rgba(0, 0, 0, 0.22));
 			@media (max-width: $mobileXSmall) {
 				display: none;
 			}

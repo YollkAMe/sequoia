@@ -1,0 +1,54 @@
+.benefits {
+   position: relative;
+   &__title {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   &__title-text {
+		font-family: 'StoneSoupNFW';
+		font-weight: 400;
+		font-size: rem(48);
+		line-height: rem(46);
+		letter-spacing: 0.05em;
+		text-align: center;
+		margin-bottom: rem(24);
+		position: relative;
+		@media (max-width: $pc) {
+			font-size: rem(40);
+			line-height: rem(38);
+		}
+      @media (max-width: $mobile) {
+			padding-left: rem(10);
+         padding-right: rem(10);
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			top: rem(-14);
+			left: rem(-24);
+			background-image: url("@img/star.svg");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: rem(18);
+			height: rem(19);
+		}
+	}
+	&__title-accent {
+		color: $accentColor;
+	}
+   &__wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: rem(10);
+      padding-bottom: rem(40);
+      @media (max-width: $tablet) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+      @media (max-width: $mobileMiddle) {
+			grid-template-columns: 1fr;
+		}
+   }
+}

@@ -1,0 +1,26 @@
+.properties {
+   position: relative;
+   &__title {
+		font-family: 'StoneSoupNFW';
+		font-weight: 400;
+		font-size: rem(40);
+		line-height: rem(46);
+		letter-spacing: 0.05em;
+		text-align: center;
+		position: relative;
+      margin-bottom: rem(24);
+		@media (max-width: $pc) {
+			font-size: rem(36);
+			line-height: rem(38);
+		}
+   }
+   &__wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: rem(10);
+      margin-bottom: rem(61);
+      @media (max-width: $mobileMiddle) {
+			grid-template-columns: 1fr;
+		}
+   }
+}

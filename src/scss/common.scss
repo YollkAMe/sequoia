@@ -1,4 +1,7 @@
 // Заголовки, общие БЄМ блоки и проче...
+.page {
+   background-color: $bgColor;
+}
 .btn {
    font-weight: 700;
    font-size: rem(17);
@@ -13,5 +16,34 @@
    &:hover {
       background: $hoverColor;
    }
-
+}
+.item {
+   background-color: $itemBg;
+   padding: rem(32) rem(24);
+   &__title {
+      font-family: 'StoneSoupNFW';
+		font-weight: 400;
+		font-size: rem(32);
+		line-height: rem(40);
+		letter-spacing: 0.05em;
+      color: $accentColor;
+		margin-bottom: rem(4);
+		@media (max-width: $pc) {
+			font-size: rem(28);
+			line-height: rem(34);
+		}
+   }
+   &__text {
+      font-size: rem(20);
+		line-height: rem(28);
+		@media (max-width: $pc) {
+			font-size: rem(18);
+			line-height: rem(24);
+		}
+   }
+   &__icon {
+      width: rem(56);
+      height: rem(56);
+      margin-bottom: rem(12);
+   }
 }
