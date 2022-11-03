@@ -21,10 +21,25 @@
       @media (max-width: $mobileMiddle) {
          padding: rem(40);
       }
+      &::before {
+			content: "";
+			position: absolute;
+			top: rem(-24);
+			right: rem(-23);
+			background-image: url("@img/leaf-7.png");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: rem(75);
+			height: rem(37);
+         @media (max-width: $pc) {
+            right: rem(-9);
+         }
+		}
       &::after {
          content: "";
          position: absolute;
-         top: rem(-10);
+         top: rem(-39);
          right: 50%;
          transform: translateX(50%);
          width: rem(222);
@@ -136,19 +151,80 @@
 			font-size: rem(40);
 			line-height: rem(38);
 		}
-      
+      &::after {
+			content: "";
+			position: absolute;
+			bottom: rem(-95);
+			left: rem(30);
+			background-image: url("@img/leaf-10.png");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: rem(36);
+			height: rem(22);
+         @media (max-width: $tablet) {
+            display: none;
+         }
+		}
 	}
    &__action-text {
       font-size: rem(25);
       line-height: rem(32);
       text-align: right;
       margin-bottom: rem(24);
+      position: relative;
       @media (max-width: $pc) {
 			font-size: rem(22);
 			line-height: rem(30);
 		}
+      @media (max-width: $mobileXSmall) {
+			width: 96%;
+		}
+      &::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: rem(-40);
+			background-image: url("@img/right-arrow.svg");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: rem(25);
+			height: rem(93);
+      }
    }
    &__button {
       width: rem(188);
+      position: relative;
+      &::before {
+			content: "";
+			position: absolute;
+			bottom: rem(10);
+			left: rem(-18);
+			background-image: url("@img/leaf-9.png");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: rem(31);
+			height: rem(14);
+      }
+      &::after {
+			content: "";
+			position: absolute;
+			bottom: rem(-108);
+			left: rem(-15);
+			background-image: url("@img/leaf-11.png");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: rem(45);
+			height: rem(35);
+         @media (max-width: $pc) {
+            bottom: rem(-100);
+         }
+         @media (max-width: $mobile) {
+            display: none;
+         }
+      }
    }
 }
