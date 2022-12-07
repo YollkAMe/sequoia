@@ -33,3 +33,5 @@ npm run sprite
 
 
 //------------------------------------------------------------------------------
+
+https://www.figma.com/file/CT8teCa9NJtgnAUQ9cNb1K/NFT-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-(Copy)?node-id=150%3A1035&t=8ZvUcNJpZHzif5R8-0

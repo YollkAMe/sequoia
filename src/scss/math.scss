@@ -1,0 +1,115 @@
+.math{
+   &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+   &__top {
+      margin-bottom: rem(26);
+   }
+   &__middle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: rem(54) rem(42);
+      width: 100%;
+      background: linear-gradient(180deg, #10121D 0%, #191D2E 100%);
+   }
+   &__bottom {
+      margin-bottom: rem(24);
+   }
+   &__button {
+      width: rem(277);
+   }
+}
+.formula {
+   display: flex;
+   align-items: flex-end;
+   @media (max-width: $mobile) {
+      flex-direction: column;
+	}
+   &__left {
+      font-family: 'StoneSoupNFW';
+		font-weight: 400;
+		font-size: rem(40);
+		line-height: rem(46);
+		letter-spacing: 0.05em;
+		text-align: center;
+		position: relative;
+      margin-right: rem(35);
+		@media (max-width: $pc) {
+			font-size: rem(36);
+			line-height: rem(38);
+		}
+   }
+   &__text-accent {
+      color: $accentColor;
+      @media (max-width: $mobile) {
+         margin-bottom: rem(24);
+		}
+      &::after {
+			content: "";
+			position: absolute;
+			bottom: rem(2);
+			right: 0;
+			background-image: url("@img/curved.svg");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: rem(48);
+			height: rem(43);
+         @media (max-width: $mobile) {
+            display: none;
+		   }
+		}
+   }
+   &__right {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      font-family: 'StoneSoupNFW';
+		font-weight: 400;
+		font-size: rem(28);
+		line-height: rem(27);
+		letter-spacing: 0.05em;
+		text-align: center;
+		@media (max-width: $pc) {
+			font-size: rem(24);
+			line-height: rem(23);
+		}
+   }
+   &__icon {
+      margin-top: rem(2);
+      margin-bottom: rem(3);
+   }
+}
+.price {
+   font-family: 'StoneSoupNFW';
+	font-weight: 400;
+	font-size: rem(40);
+	line-height: rem(40);
+	letter-spacing: 0.05em;
+	text-align: center;
+	position: relative;
+   display: flex;
+   align-items: center;
+   margin-right: rem(35);
+	@media (max-width: $pc) {
+		font-size: rem(36);
+		line-height: rem(36);
+	}
+   &__left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-right: rem(8);
+   }
+   &__value-accent {
+      color: $accentColor;
+      margin-left: rem(8);
+   }
+   &__icon {
+      margin: rem(8) 0;
+   }
+}
